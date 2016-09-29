@@ -1,0 +1,16 @@
+{
+    "name": "prework",
+    "version": "1.0.0",
+    "description": "Prework for Nodejs course",
+    "main": "index.js",
+    "scripts": {
+    "start": "nodemon index.js"
+},
+    "author": "Dang Kim Khanh",
+    "license": "ISC",
+    "devDependencies": {
+        "esnext": "^3.0.0",
+        "request": "^2.75.0",
+        "yargs": "^5.0.0"
+    }
+}
