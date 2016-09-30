@@ -162,7 +162,8 @@ Show Help
 
 The follow http header(s) are supported:
 
-_ https
+##### `https`
+
 
 ##### `x-destination-url`
 
