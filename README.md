@@ -11,9 +11,9 @@ Completed:
 * [x] Required: The destination server is configurable via the `--host`, `--port`  or `--url` arguments
 * [x] Required: The destination server is configurable via the `x-destination-url` header
 * [x] Required: Client requests and respones are printed to stdout
-* [] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
-* [] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
-* [] Optional: The `--loglevel` argument sets the logging chattiness
+* [ ] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
+* [ ] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
+* [ ] Optional: The `--loglevel` argument sets the logging chattiness
 * [x] Optional: Supports HTTPS
 * [x] Optional: `-h` argument prints CLI API
 
