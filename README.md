@@ -2,7 +2,7 @@
 
 This is a Proxy Server for Node.js submitted as the [pre-work](http://courses.codepath.com/snippets/intro_to_nodejs/prework) requirement for CodePath.
 
-Time spent: 6
+Time spent: 6 hours
 
 Completed:
 
@@ -154,9 +154,16 @@ A single url that overrides the above. E.g., `http://www.google.com`
 
 Print a log to a file
 
+##### `--help`
+
+Show Help
+
 #### Headers
 
 The follow http header(s) are supported:
+
+_ http
+_ https
 
 ##### `x-destination-url`
 
