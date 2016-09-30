@@ -18,11 +18,7 @@ Completed:
 * [x] Optional: `-h` argument prints CLI API
 
 Walkthrough Gif:
-[Add walkthrough.gif to the project root]
-
-![Video Walkthrough](walkthrough.gif)
-
-Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
+![Video Walkthrough](https://github.com/Corsad/preworkshop-proxyserver/blob/master/walkthrough.gif?raw=true)
 
 ## Starting the Server
 
