@@ -2,7 +2,7 @@
 
 This is a Proxy Server for Node.js submitted as the [pre-work](http://courses.codepath.com/snippets/intro_to_nodejs/prework) requirement for CodePath.
 
-Time spent: [Write the number of hours you spend here]
+Time spent: 6
 
 Completed:
 
@@ -24,6 +24,14 @@ Walkthrough Gif:
 
 ```bash
 npm start
+
+> prework@1.0.0 start /home/corsad/Project/Node/prework
+> nodemon index.js
+
+[nodemon] 1.10.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index.js`
 ```
 
 ## Features
@@ -31,32 +39,48 @@ npm start
 ### Echo Server:
 
 ```bash
-curl -v -X -k POST https://127.0.0.1:8000 -d "hello self" -H "x-asdf: yodawg"
-* Rebuilt URL to: http://127.0.0.1:8000/
-* Hostname was NOT found in DNS cache
+curl -k -v https://127.0.0.1:8000 -d "This is node Preworkshop"
+
+* Rebuilt URL to: https://127.0.0.1:8000/
 *   Trying 127.0.0.1...
 * Connected to 127.0.0.1 (127.0.0.1) port 8000 (#0)
+* found 173 certificates in /etc/ssl/certs/ca-certificates.crt
+* found 697 certificates in /etc/ssl/certs
+* ALPN, offering http/1.1
+* SSL connection using TLS1.2 / ECDHE_RSA_AES_128_GCM_SHA256
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* error fetching CN from cert:The requested data were not available.
+* 	 common name:  (does not match '127.0.0.1')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #1
+* 	 subject: C=VN,ST=Ho-Chi-Minh,L=city,O=coderschool,EMAIL=dang.kim.khanh93@protonmail.com
+* 	 start date: Thu, 29 Sep 2016 19:26:55 GMT
+* 	 expire date: Sun, 14 Feb 2044 19:26:55 GMT
+* 	 issuer: C=VN,ST=Ho-Chi-Minh,L=city,O=coderschool,EMAIL=dang.kim.khanh93@protonmail.com
+* 	 compression: NULL
+* ALPN, server accepted to use http/1.1
 > POST / HTTP/1.1
-> User-Agent: curl/7.37.1
 > Host: 127.0.0.1:8000
+> User-Agent: curl/7.43.0
 > Accept: */*
-> x-asdf: yodawg
-> Content-Length: 10
+> Content-Length: 24
 > Content-Type: application/x-www-form-urlencoded
 > 
-* upload completely sent off: 10 out of 10 bytes
+* upload completely sent off: 24 out of 24 bytes
 < HTTP/1.1 200 OK
-< user-agent: curl/7.37.1
 < host: 127.0.0.1:8000
+< user-agent: curl/7.43.0
 < accept: */*
-< x-asdf: yodawg
-< content-length: 10
+< content-length: 24
 < content-type: application/x-www-form-urlencoded
-< Date: Mon, 13 Apr 2015 00:45:50 GMT
+< Date: Fri, 30 Sep 2016 13:19:14 GMT
 < Connection: keep-alive
 < 
 * Connection #0 to host 127.0.0.1 left intact
-hello self
+This is node Preworkshop%   
 ```
 
 ### Proxy Server:
@@ -64,29 +88,48 @@ hello self
 Port 8001 will proxy to the echo server on port 8000.
 
 ```bash
-curl -v -k https://127.0.0.1:8001/asdf -d "hello proxy"
-* Hostname was NOT found in DNS cache
+curl -k -v https://127.0.0.1:8001 -d "This is node Preworkshop"
+
+* Rebuilt URL to: https://127.0.0.1:8001/
 *   Trying 127.0.0.1...
 * Connected to 127.0.0.1 (127.0.0.1) port 8001 (#0)
-> POST /asdf HTTP/1.1
-> User-Agent: curl/7.37.1
+* found 173 certificates in /etc/ssl/certs/ca-certificates.crt
+* found 697 certificates in /etc/ssl/certs
+* ALPN, offering http/1.1
+* SSL connection using TLS1.2 / ECDHE_RSA_AES_128_GCM_SHA256
+* 	 server certificate verification SKIPPED
+* 	 server certificate status verification SKIPPED
+* error fetching CN from cert:The requested data were not available.
+* 	 common name:  (does not match '127.0.0.1')
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #1
+* 	 subject: C=VN,ST=Ho-Chi-Minh,L=city,O=coderschool,EMAIL=dang.kim.khanh93@protonmail.com
+* 	 start date: Thu, 29 Sep 2016 19:26:55 GMT
+* 	 expire date: Sun, 14 Feb 2044 19:26:55 GMT
+* 	 issuer: C=VN,ST=Ho-Chi-Minh,L=city,O=coderschool,EMAIL=dang.kim.khanh93@protonmail.com
+* 	 compression: NULL
+* ALPN, server accepted to use http/1.1
+> POST / HTTP/1.1
 > Host: 127.0.0.1:8001
+> User-Agent: curl/7.43.0
 > Accept: */*
-> Content-Length: 11
+> Content-Length: 24
 > Content-Type: application/x-www-form-urlencoded
 > 
-* upload completely sent off: 11 out of 11 bytes
+* upload completely sent off: 24 out of 24 bytes
 < HTTP/1.1 200 OK
-< user-agent: curl/7.37.1
 < host: 127.0.0.1:8001
+< user-agent: curl/7.43.0
 < accept: */*
-< content-length: 11
+< content-length: 24
 < content-type: application/x-www-form-urlencoded
 < connection: close
-< date: Mon, 13 Apr 2015 02:03:29 GMT
+< date: Fri, 30 Sep 2016 13:19:51 GMT
 < 
 * Closing connection 0
-hello proxy
+This is node Preworkshop% 
 ```
 
 ### Configuration:
