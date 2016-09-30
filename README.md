@@ -140,7 +140,7 @@ The following CLI arguments are supported:
 
 ##### `--host`
 
-The host of the destination server. Defaults to `127.0.0.1`.
+The host of the destination server. Defaults to `localhost`.
 
 ##### `--port`
 
@@ -148,7 +148,7 @@ The port of the destination server. Defaults to `80` or `8000` when a host is no
 
 ##### `--url`
 
-A single url that overrides the above. E.g., `http://www.google.com`
+A single url that overrides the above. E.g., `google.com`
 
 ##### `--log`
 
